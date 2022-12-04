@@ -12,7 +12,7 @@ namespace AdventOfCode2022
             var list = new List<string>();
             int sum = 0;
             var CaloriesList = new List<int>();
-            var fileStream = new FileStream(@"C:\Users\semih\OneDrive\Documents\Coding\AdventOfCode2022\AdventOfCode2022\Day1Input.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream(@"..\..\..\Day1Input.txt", FileMode.Open, FileAccess.Read);
             // Taking all the input into the code.
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {

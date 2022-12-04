@@ -11,10 +11,10 @@ namespace AdventOfCode2022
         {
             string line;
             int finalScore = 0;
-            var fileStream = new FileStream(@"C:\Users\semih\OneDrive\Documents\Coding\AdventOfCode2022\AdventOfCode2022\Day2Input.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream(@"..\..\..\Day2Input.txt", FileMode.Open, FileAccess.Read);
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
-                while ((line = streamReader.ReadLine())!= null)
+                while ((line = streamReader.ReadLine()) != null)
                 {
                     // Part One.
                     /*
@@ -51,19 +51,19 @@ namespace AdventOfCode2022
                 return 3;
             }
         }
-        
-         //First column is what opponents play. A= Rock, B= Paper, C=Scissors.
-         //Second is us. X for Rock, Y for Paper, and Z for Scissors.
-         //The score for a single round is the score for the shape you selected (1 for Rock, 2 for Paper, and 3 for Scissors).
-         //Plus the score for the outcome of the round (0 if you lost, 3 if the round was a draw, and 6 if you won).
 
-        public static int WinCheck(char opponent,char you)
+        //First column is what opponents play. A= Rock, B= Paper, C=Scissors.
+        //Second is us. X for Rock, Y for Paper, and Z for Scissors.
+        //The score for a single round is the score for the shape you selected (1 for Rock, 2 for Paper, and 3 for Scissors).
+        //Plus the score for the outcome of the round (0 if you lost, 3 if the round was a draw, and 6 if you won).
+
+        public static int WinCheck(char opponent, char you)
         {
             if ((opponent == 'A' && you == 'X') || (opponent == 'B' && you == 'Y') || (opponent == 'C' && you == 'Z'))
             {
                 return 3;
             }
-            else if ((opponent=='A' && you=='Z')|| (opponent == 'B' && you == 'X') || (opponent == 'C' && you == 'Y'))
+            else if ((opponent == 'A' && you == 'Z') || (opponent == 'B' && you == 'X') || (opponent == 'C' && you == 'Y'))
             {
                 return 0;
             }
